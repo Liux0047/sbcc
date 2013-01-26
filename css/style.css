@@ -18,3 +18,13 @@ body {
 .warning{
     color:red;
 }
+.offset50{
+    padding-left:50px;
+}
+.padding-side30{
+    padding-left:30px;
+    padding-right:30px;
+}
+.font-underline{
+    text-decoration: underline;
+}

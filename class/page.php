@@ -63,6 +63,25 @@ abstract class Page{
 
     }
     
+    public function gFBScript(){
+        ?>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <?php
+    }
+    
+    public function gTweetScript(){
+        ?>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <?php
+    }
+    
     public function generateScript (){
         ?>
         <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
@@ -74,15 +93,19 @@ abstract class Page{
             });
         </script>
         <?php
+        $this->gFBScript();
+        $this->gTweetScript();
     }
-    
+           
     public function generateFooter(){
         $tempList = array();
         ?>
         <hr>
-        <div class="row">
-            <div class="span10 well">
+        <div class="contanier" well>            
+            <div class="span12">
                 <div class="row">
+                    <div class="span1">
+                    </div>
                     <div class="span4">
                         Organized by:<br>
                         <ul class="list-style-none">
@@ -138,19 +161,43 @@ abstract class Page{
         <?php
     }
     
+    public function gFBLikeBox(){
+        ?>
+        <div class="fb-like-box" data-href="http://www.facebook.com/SingaporeBusinessCaseCompetition" data-width="240" data-show-faces="true" data-stream="false" data-header="true"></div>
+        <?php 
+    }
+    
+    public function gFBLikeButton(){
+        ?>
+        <div class="fb-like" data-href="http://www.facebook.com/SingaporeBusinessCaseCompetition" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+        <?php
+    }
+    
+    public function gTweetButton(){
+        ?>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.sgbcc.com.sg" data-via="Singapore Business Case Competition" data-lang="en">Tweet</a>
+        <?php
+    }
+    
     public function generateLeftCol(){
         ?>
         <div class="span3">
-            <h3 class="font-blue align-middle">SUBMIT CASE NOW!</h3>
-            <p class="font-blue align-middle">Multiple submissions allowed</p>
+            <br>            
+            <a class="btn btn-large btn-primary padding-side30" href="<?php echo $this->getPathPrefix(); ?>registration.php">
+                Register Here Now
+            </a>
+            <br><br>
             <?php $this->generateStepImg(); ?>
             <h4>Organized by:</h4>
             <img src='<?php echo $this->getPathPrefix(); ?>img/Business-Solutions.jpg'>
             <br>
             <br>
             <img src='<?php echo $this->getPathPrefix(); ?>img/logo_nbs.png'>
+            <br><br>
+            <?php $this->gFBLikeBox(); ?>
         </div>
-        <?php
+        <br><br>
+        <?php        
     }
 
     abstract public function generateContent();
@@ -159,40 +206,45 @@ abstract class Page{
         //the header
         echo "<!DOCTYPE html><html lang='en'>";
         $this->generateHeader();
-        
         //the body
-        echo "<body>";
-        echo "<div class='container'>";
-        echo "<div class='row'>";
-        echo "<div class='span1'></div>";   //leave space on the left
-        echo "<div class='span10'>";
-        echo "<div class='row'>";
-        echo "<div class='span2'>";
-        echo "<img src='".$this->pathPrefix."img/SBCC-logo.jpg'>";
-        echo "</div>";
-        
-        echo "<div class='span8'>";
-        //dates on the top right corner
-        echo "<br>";
-        echo "<div class='align-right'>";
-        echo "<h4> Semi-Final & Grand Final</h4>";
-        echo "<h4>2 March 2013</h4>";
-        echo "</div>";
-        echo "<br><br>";
-        //the navbar
-        $this->navbar->generateNavbar();    
-        echo "</div>";
-    
-        //generate content
-        $this->generateContent();            
+        ?>        
+        <body>
+            <div class="container">
+                <div class="row">
+                    <div class="span1"></div>  
+                    <div class="span10">
+                        <div class="row">
+                            <div class="span2">
+                                <img src="<?php echo $this->getPathPrefix(); ?>img/SBCC-logo.jpg">
+                            </div>
 
-        $this->generateFooter();
-        echo "<div class='span1'></div>";   //leave space on the right
-        echo "</div>";
-        echo "</body>";
+                            <div class="span8">        
+                            <br>
+                            <div class="align-right">
+                            </div>
+                            <br><br><br><br>
+                            <?php $this->navbar->generateNavbar(); ?>   
+                            </div>                            
+                        </div>
+                        <div class="row">                                   
+                            <?php $this->generateContent(); ?>         
+                            <div class="pull-right">
+                                <?php $this->gTweetButton();?>
+                                <br>
+                                <?php $this->gFBLikeButton();?>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="span1"></div>
+                </div>
+            </div>
+        <?php $this->generateFooter(); ?>
+        </body>
         
-        $this->generateScript();
-        echo "</html>";
+        <?php $this->generateScript();?>
+        </html>
+        <?php
     }
 }
 ?>

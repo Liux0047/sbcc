@@ -1,4 +1,16 @@
 <?php
 $GLOBALS['localhost'] = true;
-$site_url = 'http://localhost/sbcc2013';
+$siteUrl = 'http://localhost/sbcc2013';
+
+//database info
+function getDBConfig(){
+    $DBInfo = array (
+        'host' => 'localhost',
+        'username' => 'root',
+        'password' => 'password',
+        'database' => 'sbcc_2013d'
+        );
+    return $DBInfo;
+}
+
 ?>

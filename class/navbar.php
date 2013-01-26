@@ -7,8 +7,8 @@ class Navbar {
             'displayMenuName' => 'About SBCC', 
             'items'=> array(
                 'aboutSBCC' => array('displayItemName' => 'About SBCC','link'=>'about-sbcc.php'),
-                'organizingCom'=> array('displayItemName' => 'Organising Committee','link'=>'Organising-Committee.php'),
-                'businessSol'=> array('displayItemName' => 'Business Solution','link'=>'Business-Solutions.php')
+                'organizingCom'=> array('displayItemName' => 'Organising Committee','link'=>'organising-committee.php'),
+                'businessSol'=> array('displayItemName' => 'Business Solution','link'=>'business-solutions.php')
                 ),
             'link'=>'#'
             ),
@@ -18,15 +18,14 @@ class Navbar {
                 'results' => array('displayItemName' => 'Results','link'=>'results.php'),
                 'judges'=> array('displayItemName' => 'Judges','link'=>'judges.php'),
                 'registration'=> array('displayItemName' => 'Online Registration','link'=>'registration.php'),
-                'rules'=> array('displayItemName' => 'Rules','link'=>'rules.php'),
-                'faq' => array('displayItemName' => 'FAQ','link'=>'faq.php'),
-                'resources'=> array('displayItemName' => 'Resources','link'=>'resources.php'),
-                'triviaChallenge'=> array('displayItemName' => 'SME-Trivia-Challenge','link'=>'sme-trivia-challenge.php')
+                'rules'=> array('displayItemName' => 'Rules','link'=>'rules.php'),                
+                'resources'=> array('displayItemName' => 'Resources','link'=>'resources.php')
                 ),
             'link'=>'#'
             ),
         'highlights' => array ('displayMenuName' => 'Highlights', 'items'=> array(),'link'=>'highlights.php'),
-        'sponsors' => array ('displayMenuName' => 'Sponsors', 'items'=> array(), 'link'=>'sponsors.php')        
+        'sponsors' => array ('displayMenuName' => 'Sponsors', 'items'=> array(), 'link'=>'sponsors.php'),
+        'faq' => array('displayMenuName' => 'FAQ', 'items'=> array(),'link'=>'faq.php'),
     );
     
     private $pathPrefix = './';
@@ -46,7 +45,7 @@ class Navbar {
             if (count($item['items'])){
                 echo "<li class='dropdown'>".
                         " <a class='dropdown-toggle' data-toggle='dropdown' href='#'>".
-                        $item['displayMenuName'].
+                        "<b>".$item['displayMenuName']."</b>".
                         "<b class='caret'></b>".
                         "</a>".
                         "<ul class='dropdown-menu'>";
@@ -56,10 +55,13 @@ class Navbar {
                 echo "</ul></li>";     
             }
             else{
-                echo "<li><a href='".$this->pathPrefix.$item['link']."'>".$item['displayMenuName']."</a></li>";
+                echo "<li><a href='".$this->pathPrefix.$item['link']."'><b>".$item['displayMenuName']."</b></a></li>";
             }
         }
-        echo "<div class='pull-right'><a class='btn btn-primary' href='#'>Log in</a></div>";
+        echo "<div class='pull-right btn-group'>";
+        echo "<a class='btn btn-primary' href='#'>Log in</a>";
+        echo "<a class='btn btn-primary' href='".$this->pathPrefix."registration.php'>Sign up</a>";
+        echo "</div>";
         echo "</ul>";
   
     }
