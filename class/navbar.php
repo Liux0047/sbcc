@@ -1,5 +1,5 @@
 <?php
-class Navbar {
+class Navbar {    
     //initialize all elements in the navbar list
     private $menu = array( 
         'home' => array ('displayMenuName' => 'Home', 'items'=> array(), 'link'=>'index.php'),     
@@ -7,8 +7,8 @@ class Navbar {
             'displayMenuName' => 'About SBCC', 
             'items'=> array(
                 'aboutSBCC' => array('displayItemName' => 'About SBCC','link'=>'about-sbcc.php'),
-                'organizingCom'=> array('displayItemName' => 'Organising Committee','link'=>'organising-committee.php'),
-                'businessSol'=> array('displayItemName' => 'Business Solution','link'=>'business-solutions.php')
+                'OrganisingCom'=> array('displayItemName' => 'Organising Committee','link'=>'organising-committee.php'),
+                'businessSol'=> array('displayItemName' => 'Business Solutions','link'=>'business-solutions.php')
                 ),
             'link'=>'#'
             ),
@@ -38,6 +38,34 @@ class Navbar {
         return $this->menu;
     }
     
+    function generateLoginModal(){
+        ?>
+        <div id="login_panel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="login_header" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="login_header">Log in</h3>
+            </div>                            
+            <div class="modal-body" id="login_input">                 
+                <div class="alert alert-block alert-error fade hide" id="login_fail_alert">                                
+                    <h4 class="alert-heading"><?php echo SORRY_LOGIN_FAILED; ?>.</h4>
+                    <p><?php echo INVALID_EMAIL_OR_PASSWORD; ?></p>
+                    <p>
+                      <a class="btn btn-danger" href="#"><?php echo FORGET_PASSWORD; ?>?</a> 
+                    </p>
+                </div>                
+                <div>                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary inline" onclick="auth_login()">
+                    Sign in
+                </button>
+            </div>
+        </div>
+        <?php
+    }
+    
     function generateNavbar(){
         echo "<ul class='nav nav-pills'>";
         foreach ($this->menu as $key => $item){
@@ -59,11 +87,20 @@ class Navbar {
             }
         }
         echo "<div class='pull-right btn-group'>";
-        echo "<a class='btn btn-primary' href='#'>Log in</a>";
-        echo "<a class='btn btn-primary' href='".$this->pathPrefix."registration.php'>Sign up</a>";
+        if ($this->isLoggedIn()){
+            echo "<a class='btn btn-primary' href='".$this->pathPrefix."competition-portal.php'>My Portal</a>";
+            echo "<a class='btn btn-primary' href='".$this->pathPrefix."logout.php'>Log out</a>";
+        }
+        else{            
+            echo "<a class='btn btn-primary' href='".$this->pathPrefix."login.php'>Log in</a>";
+            echo "<a class='btn btn-primary' href='".$this->pathPrefix."registration.php'>Sign up</a>";            
+        }
         echo "</div>";
         echo "</ul>";
-  
+    }
+    
+    public function isLoggedIn(){
+        return isset($_SESSION['userEmail']);
     }
 }
 

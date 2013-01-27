@@ -56,6 +56,12 @@ abstract class Page{
         echo "<link href='".$this->pathPrefix."css/style.css' rel='stylesheet'>";
         echo "<link rel='shortcut icon' type='image/x-icon' href='".$this->pathPrefix."img/favicon.png'> ";
         
+        if (isset($_SERVER['HTTP_USER_AGENT']) && 
+            (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) {
+            //detect browser
+            echo "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>";
+        }
+        
         //title
         echo "<title>".$this->title."</title>";
         
@@ -187,7 +193,7 @@ abstract class Page{
                 Register Here Now
             </a>
             <br><br>
-            <?php $this->generateStepImg(); ?>
+            <?php //$this->generateStepImg(); ?>
             <h4>Organized by:</h4>
             <img src='<?php echo $this->getPathPrefix(); ?>img/Business-Solutions.jpg'>
             <br>
@@ -215,7 +221,7 @@ abstract class Page{
                     <div class="span10">
                         <div class="row">
                             <div class="span2">
-                                <img src="<?php echo $this->getPathPrefix(); ?>img/SBCC-logo.jpg">
+                                <a href="<?php echo $this->getPathPrefix(); ?>index.php"><img src="<?php echo $this->getPathPrefix(); ?>img/SBCC-logo.png"></a>
                             </div>
 
                             <div class="span8">        

@@ -8,4 +8,11 @@ function getContentFromFile($path){
     fclose($handle);
     return $contents;
 }
+
+function startSession(){
+    //start sesstion
+    if(session_id() == '') {
+        session_start(); 
+    }
+}
 ?>

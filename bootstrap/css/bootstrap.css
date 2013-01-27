@@ -5870,7 +5870,7 @@ a.badge:hover {
 
 .carousel {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   line-height: 1;
 }
 

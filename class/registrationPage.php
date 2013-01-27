@@ -11,7 +11,7 @@ class RegistrationPage extends Page{
             <div class="span7">
                 <h3>Online Registration</h3>
                 <p>
-                    Registrations stay open until 13 February 2012, 2359H. However, the case will be released on January 30th and deliverables have to be submitted by February 13th. Register early to give yourselves more time!
+                    Registrations stay open until 21st February 2013, 2359H. However, the case will be released on 15th February and deliverables have to be submitted by 22nd February, 0900H. Register early to give yourselves more time!
                 </p>
                 <br>
                 <form class="form-horizontal" id="registrationForm" action="<?php echo $this->getPathPrefix(); ?>processReg.php" method="POST">
@@ -139,8 +139,8 @@ class RegistrationPage extends Page{
                     
                     <legend>Agreement</legend>
                     <div class="control-group">
-                        <label class="checkbox">
-                            <input type="checkbox">We solemnly agree to play by the <a href="<?php echo $this->getPathPrefix(); ?>rules.php">rules</a> and are ready for the ultimate case experience!                            
+                        <label class="checkbox" for="terms">
+                            <input type="checkbox" id="terms" name="terms">We solemnly agree to play by the <a href="<?php echo $this->getPathPrefix(); ?>rules.php">rules</a> and are ready for the ultimate case experience!                            
                         </label>
                                            
                     </div>
@@ -197,6 +197,9 @@ class RegistrationPage extends Page{
                         required: true,
                         minlength: 5,
                         equalTo: "#password"
+                    },
+                    terms: {
+                        required: true
                     }
                     <?php 
                     //for 4 members
@@ -221,6 +224,9 @@ class RegistrationPage extends Page{
                             confirmPassword: {
                                 required: '*Repeat your password',
                                 equalTo: '*Enter the same password as above'
+                            },
+                            terms:{
+                                required: '*You must agree with our rules'
                             }
                         "
                     ?>

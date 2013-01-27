@@ -1,4 +1,7 @@
 <?php
+include './functions/core-functions.php';
+
+startSession();
 
 putenv("TZ=Asia/Singapore");
 

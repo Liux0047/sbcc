@@ -127,13 +127,20 @@ class RulesPage extends Page{
                     <div class="page-header">
                         <h3>Preliminary Round</h3>
                     </div>
+                    <p>
+                        <strong>Case Release</strong>
+                    </p>
                     <ul>
                         <li>
-                            <strong>Case Release</strong><br>
                             The preliminary round case will be released on 15 February 2013 0900 hrs. Teams can find the case uploaded on <a href="www.sgbcc.com.sg">www.sgbcc.com.sg</a> after logging in to the Competitor’s page.
                         </li>
-                        <li>
-                            <strong>Deliverables</strong><br>
+                    </ul>
+                    
+                    <p>
+                        <strong>Deliverables</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             <p>
                                 Teams are to submit a two page executive summary and a six slides powerpoint presentation that encompasses their solution to the case problem in one PDF file by 22 February 2013, 0900hrs. 
                             </p>                        
@@ -231,7 +238,7 @@ class RulesPage extends Page{
                                             Limit
                                         </td>
                                         <td>
-                                            <strong>6 Slides maximum</strong>
+                                            6 Slides maximum <strong>including cover slide if any</strong>
                                         </td>
                                     </tr>
                                     <tr>
@@ -239,7 +246,7 @@ class RulesPage extends Page{
                                             Format
                                         </td>
                                         <td>
-                                            All presentations must be submitted in PDF format in <strong>a single 6 slides horizontal hand-out, portrait orientation</strong>
+                                            All presentations must be submitted in MS PowerPoint 2007 or PDF format (1 slide per page) only
                                         </td>
                                     </tr>
                                     <tr>
@@ -256,12 +263,16 @@ class RulesPage extends Page{
                         <li>
                             Contents in the presentation slides submitted should not deviate from the solution suggested by the team in the executive summary.
                         </li>
-                        <li>
-                            <strong>Submission</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Submission</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Submission will be done via the upload link on the Competitor’s page. Teams are encouraged to submit early to avoid possible network problems.
                         </li>
                         <li>
-                            Teams are only allowed to submit multiple times. Only the latest submission will be considered.
+                            Teams are allowed to submit multiple times. Only the latest submission will be considered.
                         </li>
                         <li>
                             Upon successful receipt of the executive summary, SBCC will notify each team via email.
@@ -269,16 +280,28 @@ class RulesPage extends Page{
                         <li>
                             In the event of submission delay due to a documented failure in network infrastructure or the lack of a receipt acknowledgement email, teams must promptly notify SBCC 2013 organisers at <a href="competition@sgbcc.com.sg">competition@sgbcc.com.sg</a> so that organisers can provide an alternative avenue for submission.
                         </li>
-                        <li>
-                            <strong>External Support</strong><br>
+                    </ul>
+                    <p>
+                        <strong>External Support</strong>
+                    </p>
+                    <ul>                        
+                        <li>                            
                             After receiving the case, teams are not allowed to receive any assistance from any external parties in preparing the executive summary.                            
                         </li>
-                        <li>
-                            <strong>Anonymity</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Anonymity</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Teams are not allowed to include anything in their executive summary that would enable judges to identify their education institution.
                         </li>
-                        <li>
-                            <strong>Judging</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Judging</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             The executive summaries will be evaluated on the basis of clarity, accuracy of issue identification and analysis, the relevance and viability of proposals and recommendations, and creativity.
                         </li>
                     </ul>                    
@@ -288,31 +311,49 @@ class RulesPage extends Page{
                     <div class="page-header">
                         <h3>Semi-finals</h3>
                     </div>
+                    <p>
+                        <strong>Notification of Semi-Finalist</strong>
+                    </p>
                     <ul>
-                        <li>
-                            <strong>Notification of Semi-Finalist</strong><br>
+                        <li>                            
                             The result of the preliminary round will be announced by 26 February 2013 2359 hrs.
                         </li>
-                        <li>
-                            <strong>Order and Grouping of Teams</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Order and Grouping of Teams</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             A random ballot will be conducted to determine the order of presentation and grouping of teams.
                         </li>
                         <li>
                             There will be 4 groups of 5 teams. Of which, only the top team of each group will proceed to the Finals.
                         </li>
-                        <li>
-                            <strong>Case Release</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Case Release</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             The case will be released on 2 March 2013, at the competition venue. Teams will have 5 hours to work on the case and prepare their presentation slides.
                         </li>
-                        <li>
-                            <strong>Resources</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Resources</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             No laptops or writing materials will be provided. All teams are to bring their own working materials.
                         </li>
                         <li>
                             All teams will have access to the internet during case preparation.
                         </li>
-                        <li>
-                            <strong>Submission</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Submission</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Teams will have to submit their semi-finals slides at the time and location specified by the Competition Director during case release.
                         </li>
                         <li>
@@ -369,25 +410,45 @@ class RulesPage extends Page{
                                 </tbody>
                             </table>
                         </li>
-                        <li>
-                            <strong>Presentation</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Presentation</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Teams will have 10 minutes to present their analysis of the case, followed by 10 minutes of question and answer. When a team finishes its presentation, it will proceed immediately to the Q&A session. Upon reaching time limits, a presenter may complete only the current sentence.
                         </li>
-                        <li>
-                            <strong>Presentation Materials</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Presentation Materials</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             The organisers of SBCC 2013 will prepare copies of each team’s PowerPoint slides and distribute them to the judges.<br>
                             Teams are not permitted to give the judges any other supplementary material.
                         </li>
-                        <li>
-                            <strong>Judging</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Judging</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Presentations will be evaluated on the basis of clarity, accuracy of issue identification and analysis, the relevance and viability of proposals and recommendations, and creativity.
                         </li>
-                        <li>
-                            <strong>Audience participation</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Audience participation</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Except for faculty advisors, no team will be allowed to watch the presentations of other teams during the Semi-finals. 
                         </li>
-                        <li>
-                            <strong>Anonymity</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Anonymity</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Teams are not allowed to include anything in their presentation slides that would enable judges to identify their education institution.
                         </li>
                     </ul>                    
@@ -397,42 +458,68 @@ class RulesPage extends Page{
                     <div class="page-header">
                         <h3>Grand Final</h3>
                     </div>
+                    <p>
+                        <strong>Notification of Grand-Finalist</strong>
+                    </p>
                     <ul>
-                        <li>
-                            <strong>Notification of Grand-Finalist</strong><br>
+                        <li>                            
                             The result of the semi-finals will be announced prior to the commencement of the finals. 
                         </li>
                         <li>
                             Upon announcement of the finalists, the finalists are to return to their holding rooms until it is their turn to present. 
                         </li>
-                        <li>
-                            <strong>Order and Grouping of Teams</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Order and Grouping of Teams</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             A random ballot will be conducted to determine the order of presentation and grouping of teams.
                         </li>
-                        <li>
-                            <strong>Presentation</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Presentation</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Finalists will present the same presentation they have prepared for the semi-finals.
                         </li>
                         <li>
                             Teams will have 10 minutes to present their analysis of the case, followed by 10 minutes of question and answer. When a team finishes its presentation, it will proceed immediately to the Q&A session. Upon reaching time limits, a presenter may complete only the current sentence.
                         </li>
-                        <li>
-                            <strong>Presentation Slides</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Presentation Slides</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Teams will not be allowed to edit their slides between the semi-finals and finals.
                         </li>
-                        <li>
-                            <strong>Presentation Materials</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Presentation Materials</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             The organisers of SBCC 2013 will prepare copies of each team’s PowerPoint slides and distribute them to the judges.
                         </li>
                         <li>
                             Teams are not permitted to give the judges any other supplementary material.
                         </li>
-                        <li>
-                            <strong>Judging</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Judging</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             Presentations will be evaluated on the basis of clarity, accuracy of issue identification and analysis, the relevance and viability of proposals and recommendations, and creativity.
                         </li>
-                        <li>
-                            <strong>Audience participation</strong><br>
+                    </ul>
+                    <p>
+                        <strong>Audience participation</strong>
+                    </p>
+                    <ul>
+                        <li>                            
                             After the finalists have presented, they will be allowed to watch the presentations of other teams.
                         </li>
                     </ul>

@@ -11,8 +11,8 @@ $db = DBConnect();
 $teamName = $db->real_escape_string ($_POST['teamName']);
 $teamEmail = $db->real_escape_string ($_POST['teamEmail']);
 $contact = $db->real_escape_string ($_POST['contact']);
-$password =$_POST['password'];      //special char in pwd should not be escaped
-$teamSize =$db->real_escape_string ($_POST['teamSize']);
+$password = $_POST['password'];      //special char in pwd should not be escaped
+$teamSize = $_POST['teamSize'];
 
 $members = array ();
 for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
@@ -27,10 +27,10 @@ for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
     );
     $members[$memberId] = $member;
 }
-var_dump($members);
+//var_dump($members);
 
 //check if the email has already been regitered
-$sqlCheckEmail = "select * from rtw_registration where teamemail = '$teamEmail'";
+$sqlCheckEmail = "select * from registration where team_email = '$teamEmail'";
 $resultCheckEmail = $db->query($sqlCheckEmail);
 //if there is a result
 if ($resultCheckEmail->num_rows){
@@ -59,7 +59,7 @@ if (!$resultTeam){
     die('Error in writing team info to database.');
 }
 echo "<br>";
-echo $sqlTeam;
+//echo $sqlTeam;
 
 //write member info into database
 for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
@@ -77,7 +77,7 @@ for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
             "'".$members[$memberId]['YOG']."',".
             "'".$members[$memberId]['DR']."'".
             ")";
-    echo $sqlMember;
+    //echo $sqlMember;
     $resultMember = $db->query($sqlMember);
     if (!$resultMember){
         die('Error in writing member info to database.');
@@ -101,22 +101,22 @@ switch($teamSize){
 }   //produces SGB0001
 
 //read the template from file
-$filePath = "./template/confirmation.html";
+$filePath = "./templates/confirmation.html";
 $emailContent = getContentFromFile($filePath);
-$filePath = "./template/confirmation_member.html";
-$memEmailContent = getContentFromFile($filePath);
 
 //generate member part content
 $memEmail = '';
-for($i=2; $i<=$teamSize; $i++){
-        $memEmailContent = str_replace('{COUNT}', $i ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_Name}', $members[$memberId]['name'] ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_EmailAddress}', $members[$memberId]['email'] ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_Institution}', $members[$memberId]['inst'] ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_Course}', $members[$memberId]['course'] ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_YOG}', $members[$memberId]['YOG'] ,$memEmailContent);
-        $memEmailContent = str_replace('{Member_Dietary}', $members[$memberId]['DR'] ,$memEmailContent);
-        $memEmail .= $memEmailContent;
+for($index=2; $index<=$teamSize; $index++){
+    $filePath = "./templates/confirmation_member.html";
+    $memEmailContent = getContentFromFile($filePath);   
+    $memEmailContent = str_replace('{COUNT}', $index ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_Name}', $members[$index]['name'] ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_EmailAddress}', $members[$index]['email'] ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_Institution}', $members[$index]['inst'] ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_Course}', $members[$index]['course'] ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_YOG}', $members[$index]['YOG'] ,$memEmailContent);
+    $memEmailContent = str_replace('{Member_Dietary}', $members[$index]['DR'] ,$memEmailContent);
+    $memEmail .= $memEmailContent;
 }
 
 //generate leader and overall part of email
@@ -139,10 +139,12 @@ $message = Swift_Message::newInstance('SBCC - Registration Confirmation')
         ->setFrom(array('info@sgbcc.com.sg' => 'SBCC Organising Committee'))
         ->setTo(array($teamEmail => $teamName))
         ->setBody($emailContent,'text/html')
-        ->attach(Swift_Attachment::fromPath('./downloads/SBCC Rules and Regulations 2013.pdf'))
+        ->attach(Swift_Attachment::fromPath('./downloads/SBCC 2013 Rules and Regulations.pdf'))
 ;
 $result = $mailer->send($message);
 /* end of sending email  */
+
+$db->close();
 
 /* generate the page */
 include './class/navbar.php';

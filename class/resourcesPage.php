@@ -10,7 +10,7 @@ class ResourcesPage extends Page{
             <div class="span7">    
                 <h2>Resources</h2>
                 <p>
-                    From the feedback we have gathered, we understand that many of you are facing difficulties with the case. However, we encourage you to strive on and distinguish yourselves. It is only through a tough case can we differentiate the top teams. For many of you without prior case experiences, you may find the links below useful in sharpening your analysis and presentations. We hope E&Y-SBCC will prove to be a steep but worthwhile learning experience.
+                    From the feedback we have gathered, we understand that many of you are facing difficulties with the case. However, we encourage you to strive on and distinguish yourselves. It is only through a tough case can we differentiate the top teams. For many of you without prior case experiences, you may find the links below useful in sharpening your analysis and presentations. We hope SBCC will prove to be a steep but worthwhile learning experience.
                 </p>
                 <section id="Preparation">
                     <div class="page-header">

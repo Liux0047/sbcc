@@ -1,4 +1,7 @@
 <?php
+include './functions/core-functions.php';
+
+startSession();
 
 include './class/navbar.php';
 include './class/page.php';

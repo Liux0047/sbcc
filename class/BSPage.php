@@ -18,7 +18,7 @@ class BSPage extends Page{
                     Members of Business Solutions represent the school to compete with the world's best in international case competitions. Business Solutions has left its global footprint in countries including the United States of America, Canada, Thailand, Mexico, India, Indonesia, Cambodia, Netherlands, Bangladesh, New Zealand, Hong Kong and Latvia, and has garnered remarkable accolades by winning the top prizes in many of these competitions. 
                 </p>
                 <p>
-                    Business Solutions also organizes its very own international case competition which is now in its fifth year running, the Asian Business Case Competition @ Nanyang, as well as the annual Nanyang Business School Case Competition. This is the first year that Business Solutions is launching the Ernst & Young Singapore Business Case Competition.
+                    Business Solutions also organizes its very own international case competition, the Asian Business Case Competition. This is the third year that Business Solutions is launching the Singapore Business Case Competition.
                 </p>
             </div>
         </div>

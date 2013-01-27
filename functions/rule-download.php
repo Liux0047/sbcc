@@ -1,5 +1,5 @@
 <?php
-$file = "../downloads/SBCC Rules and Regulations 2013.pdf";
+$file = "../downloads/SBCC 2013 Rules and Regulations.pdf";
 
 if (file_exists($file)) {
     header('Content-Description: File Transfer');

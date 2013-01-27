@@ -1,13 +1,7 @@
 <?php
-putenv("TZ=Asia/Singapore");
+include './functions/core-functions.php';
 
-/* add www
-if(isset($_SERVER['HTTP_HOST']) && substr($_SERVER['HTTP_HOST'],0,4) != 'www.'){
-	header('Location: http://www.sgbcc.com.sg'.$_SERVER['REQUEST_URI'],301);
-	die();
-}
- * 
- */
+startSession();
 
 include './class/navbar.php';
 include './class/page.php';

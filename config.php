@@ -8,7 +8,7 @@ function getDBConfig(){
         'host' => 'localhost',
         'username' => 'root',
         'password' => 'password',
-        'database' => 'sbcc_2013d'
+        'database' => 'sbcc_2013'
         );
     return $DBInfo;
 }
