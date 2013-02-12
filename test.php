@@ -1,23 +1,9 @@
-<?php
-
-include './plug-in/swift-mailer/lib/swift_required.php';
-
-$transport = Swift_MailTransport::newInstance();
-$mailer = Swift_Mailer::newInstance($transport);
-// Create the message
-$message = Swift_Message::newInstance();
-
-  // Give the message a subject
- $message ->setSubject('Your subject');
-
-  // Set the From address with an associative array
-  $message->setFrom(array('info@sgbcc.com.sg' => 'SBCC'));
-
-  // Set the To addresses with an associative array
-  $message->setTo(array('tracy1kobe@gmail.com' => 'Allen'));
-
-  // Give it a body
-  $message->setBody('Here is the message itself');
-
-$result = $mailer->send($message);
-?>
+<html>
+<form enctype="multipart/form-data" action="<?php $this->getPathPrefix(); ?>processFile.php" method="POST">
+<!-- MAX_FILE_SIZE must precede the file input field -->
+<input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
+<!-- Name of input element determines name in $_FILES array -->
+Send this file: <input name="userfile" type="file" />
+<input type="submit" value="Send File" />
+</form>
+</html>

@@ -33,6 +33,7 @@ if (isset($_POST['userEmail']) && isset($_POST['password'])){
     else{
         $page->setFailed(true);
     }
+    $db->close();
 }
 
 $page->generatePage();

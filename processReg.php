@@ -90,15 +90,7 @@ include './plug-in/swift-mailer/lib/swift_required.php';
 include './functions/core-functions.php';
 
 //generate a regRef
-$regRef = str_pad($nextId,4,"0",STR_PAD_LEFT );       //produce 0001
-switch($teamSize){
-    case '3':
-        $regRef = 'SGB'.$regRef;
-        break;	
-    case '4':
-        $regRef = 'SGC'.$regRef;
-        break;	
-}   //produces SGB0001
+$regRef = generateRegRef($nextId,$teamSize);
 
 //read the template from file
 $filePath = "./templates/confirmation.html";
