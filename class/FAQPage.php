@@ -27,7 +27,7 @@ class FAQPage extends Page{
                                 <span class="badge badge-info">A</span>:
                             </td>
                             <td>
-                                Unfortunately, the competition is only open to students attending a Singapore University or Polytechnic (NTU, NUS, SMU, SIM, NP, NYP, SP, RP , TP). However, Business Solutions also organises an international case competition called the Asian Business Case Competition. You are welcome to participate in this competition! For more information, please check <a href="http://www.abcc.com.sg/">http://www.abcc.com.sg/</a>
+                                Unfortunately, the competition is only open to students attending a Singapore University or Polytechnic (NTU, NUS, SMU, SIM, SUTD, NP, NYP, SP, RP , TP). However, Business Solutions also organises an international case competition called the Asian Business Case Competition. You are welcome to participate in this competition! For more information, please check <a href="http://www.abcc.com.sg/">http://www.abcc.com.sg/</a>
                                 <br><br>
                             </td>
                         </tr>
