@@ -1,5 +1,6 @@
 <?php
-$file = "../downloads/SBCC 2013 Rules and Regulations.pdf";
+$fileName = urldecode($_GET['fileName']);
+$file = "../downloads/$fileName";
 
 if (file_exists($file)) {
     header('Content-Description: File Transfer');
