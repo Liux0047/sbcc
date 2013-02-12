@@ -8,7 +8,65 @@ class CPPage extends Page{
             </div>
             <div class="span7">    
                 <h3>Competition Portal</h3>
-                <h4>Watch out for future updates!</h4>
+                <br>                
+                <h4>Case Preparation Kit</h4>
+                <ul>
+                    <li>
+                        <h5 class="font-black">Case Workshop Video – Kanesh Bala</h5>
+                        <a class="btn " href="
+                           <?php
+                           $fileName = "SBCC Case Wkshp.m4v";
+                           echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName";                           
+                           ?>">Video Download</a>
+                    </li>
+                    <li>
+                        <h5 class="font-black">Case Preparation Slides: Business Solutions' Methodology and Financial Analysis</h5>
+                        <a class="btn " href="
+                           <?php
+                           $fileName = "SBCC 2013 Preparation Kit.pdf";
+                           echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName";
+                           ?>">PDF Download</a>
+                    </li>
+                </ul>
+                <br>
+                <h4>Past-year SBCC Qualifying Cases</h4>
+                <ul>
+                    <li>
+                        <h5 class="font-black">Qualifying Case 2012</h5>
+                        <a class="btn " href="
+                           <?php
+                           $fileName = "SBCC 2012 Qualifying Round Case.pdf";
+                           echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName";
+                           ?>">Download Case</a>  
+                    </li>
+                    <li>
+                        <h5 class="font-black">Qualifying Case 2011</h5>
+                        <p>
+                            <a class="btn " href="
+                                <?php
+                                $fileName = "SBCC 2011 Qualifying Case.pdf";
+                                echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName";
+                                ?>">Download Case
+                            </a>
+                        </p>
+                        <p>
+                            <a class="btn " href="
+                                <?php
+                                $fileName = "SBCC 2011 Assignment Memo.pdf";
+                                echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName";
+                                ?>">Download SBCC Assignment Memo
+                            </a> 
+                        </p>
+                        
+                    </li>
+                </ul>
+                <br>
+                <h4>
+                    Video Presentation for Qualifying Case 2011
+                </h4>
+                <iframe width="420" height="315" src="http://www.youtube-nocookie.com/embed/J89hnFWcrlg?rel=0" frameborder="0" allowfullscreen></iframe><br>
+                Note that this video presentation is only to be used as a guide for your team's application of case analysis.
+                
             </div>
         </div>
         <?php
