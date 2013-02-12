@@ -50,7 +50,7 @@ class IndexPage extends Page{
             <div class="span7">
                 <h2>Welcome to the Singapore Business Case Competition 2013 </h2>
                 <p>
-                    The highly anticipated Singapore Business Case Competition is open to all undergraduates from the four universities as well as 5 selected polytechnics in Singapore: National University of Singapore (NUS), Nanyang Technological University (NTU), Singapore Management University (SMU) and Singapore Institute of Management (SIM), Nanyang Polytechnic (NYP), Ngee Ann Polytechnic (NP), Republic Polytechnic (RP), Singapore Polytechnic (SP) and Temasek Polytechnic (TP).
+                    The highly anticipated Singapore Business Case Competition is open to all undergraduates from the four universities as well as 5 selected polytechnics in Singapore: National University of Singapore (NUS), Nanyang Technological University (NTU), Singapore Management University (SMU) and Singapore Institute of Management (SIM), Singapore University of Technology and Design (SUTD), Nanyang Polytechnic (NYP), Ngee Ann Polytechnic (NP), Republic Polytechnic (RP), Singapore Polytechnic (SP) and Temasek Polytechnic (TP).
                 </p>
                 <p>
                     To encourage synergy and diversity in the competition, we allow teams consisting of 3-4 members to be formed across all four universities and faculties. We will also be incorporating other non-competition elements to ensure that our participants have a good time and the opportunity to build lasting friendships across universities.
