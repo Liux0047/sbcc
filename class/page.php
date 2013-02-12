@@ -24,6 +24,10 @@ abstract class Page{
         return $this->pathPrefix;
     }
     
+    public function getNavbar(){
+        return $this->navbar;
+    }
+    
     public function generateStepImg(){
         for ($i=1; $i<=3; $i++){
             echo "<img src='".$this->pathPrefix."img/steps/".$i;
@@ -90,8 +94,8 @@ abstract class Page{
     
     public function generateScript (){
         ?>
-        <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>   
+        <script type="text/javascript" src="<?php echo $this->getPathPrefix(); ?>js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->getPathPrefix(); ?>bootstrap/js/bootstrap.min.js"></script>   
         <script type="text/javascript">      
             $(document).ready( function() {       
                 //enables the dropdown menu 
@@ -193,8 +197,11 @@ abstract class Page{
                 Register Here Now
             </a>
             <br><br>
+            <h5>Proudly Sponsored by:</h5>
+            <img src='<?php echo $this->getPathPrefix(); ?>img/leefoundation-logo.jpg'>
+            <span class="span2"><hr></span>
             <?php //$this->generateStepImg(); ?>
-            <h4>Organized by:</h4>
+            <h5>Organized by:</h5>
             <img src='<?php echo $this->getPathPrefix(); ?>img/Business-Solutions.jpg'>
             <br>
             <br>
@@ -207,6 +214,10 @@ abstract class Page{
     }
 
     abstract public function generateContent();
+    
+    public function isLoggedIn(){
+        return isset($_SESSION['registrationId']);
+    }
     
     public function generatePage (){      
         //the header

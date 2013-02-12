@@ -34,9 +34,6 @@ class ResourcesPage extends Page{
                         <a href="http://www4.caes.hku.hk/epc/presentation/content_and_structure.htm">Content and Structure</a>
                     </p>
                     <p>
-                        <a href="http://www.experiential.sg/archives/1316">The Art of Persuasion</a>
-                    </p>
-                    <p>
                         <a href="http://www.wired.com/wired/archive/11.09/ppt2.html">Tufte on Evil Powerpoints</a>
                     </p>
                 </section>

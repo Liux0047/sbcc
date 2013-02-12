@@ -38,34 +38,6 @@ class Navbar {
         return $this->menu;
     }
     
-    function generateLoginModal(){
-        ?>
-        <div id="login_panel" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="login_header" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="login_header">Log in</h3>
-            </div>                            
-            <div class="modal-body" id="login_input">                 
-                <div class="alert alert-block alert-error fade hide" id="login_fail_alert">                                
-                    <h4 class="alert-heading"><?php echo SORRY_LOGIN_FAILED; ?>.</h4>
-                    <p><?php echo INVALID_EMAIL_OR_PASSWORD; ?></p>
-                    <p>
-                      <a class="btn btn-danger" href="#"><?php echo FORGET_PASSWORD; ?>?</a> 
-                    </p>
-                </div>                
-                <div>                    
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                <button class="btn btn-primary inline" onclick="auth_login()">
-                    Sign in
-                </button>
-            </div>
-        </div>
-        <?php
-    }
-    
     function generateNavbar(){
         echo "<ul class='nav nav-pills'>";
         foreach ($this->menu as $key => $item){

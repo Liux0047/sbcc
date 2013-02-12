@@ -15,7 +15,11 @@ class RulesPage extends Page{
                         The organizers offer the following procedures and rules to provide a competition environment that is enjoyable, transparent, and fair to all teams.
                     </p>
                     <p>
-                        <a href='<?php echo $this->getPathPrefix(); ?>functions/rule-download.php' class='btn btn-info'>
+                        <a href='
+                            <?php 
+                            $fileName = urlencode("SBCC 2013 Rules and Regulations.pdf");
+                            echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName"; ?>
+                           ' class='btn btn-info'>
                             <i class="icon-file icon-white"></i> Download Rules in PDF
                         </a>
                     </p>
@@ -26,7 +30,7 @@ class RulesPage extends Page{
                       <h3>Eligibility</h3>
                     </div>
                     <p>
-                        The competition is open to all undergraduates enrolled full time in a Singapore university and students from all 5 local polytechnics. Namely, full time undergraduates from the Nanyang Technological University (NTU), National University of Singapore (NUS), Singapore Institute of Management (UniSIM), Singapore Management University (SMU) as well as full time students from Nanyang Polytechnic, Ngee Ann Polytechnic, Republic Polytechnic, Singapore Polytechnic, Temasek Polytechnic.
+                        The competition is open to all undergraduates enrolled full time in a Singapore university and students from all 5 local polytechnics. Namely, full time undergraduates from the Nanyang Technological University (NTU), National University of Singapore (NUS), Singapore Institute of Management (UniSIM), Singapore Management University (SMU), Singapore University of Technology and Design (SUTD) as well as full time students from Nanyang Polytechnic, Ngee Ann Polytechnic, Republic Polytechnic, Singapore Polytechnic, Temasek Polytechnic.
                     </p>              
                     <ul>
                         <li>
@@ -89,7 +93,7 @@ class RulesPage extends Page{
                     </div>
                     <ul>
                         <li>
-                            To register, students should log onto <a href="www.sgbcc.com.sg">www.sgbcc.com.sg</a>. Registration ends on 21st  February 2013, 2359hrs.
+                            To register, students should log onto <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a>. Registration ends on 21st  February 2013, 2359hrs.
                         </li>
                         <li>
                             In selecting team names, teams are not allowed to indicate or suggest their education institution. 
@@ -104,10 +108,10 @@ class RulesPage extends Page{
                             Upon registration, teams will receive an email confirming the validity of the email address provided. Emails will be the main communication channel between teams and the organizers. The onus is on all teams to ensure receipt of the confirmation email. 
                         </li>
                         <li>
-                            In the event no confirmation email is received, teams are to notify the organizers promptly at <a href="competition@sgbcc.com.sg">competition@sgbcc.com.sg</a>.
+                            In the event no confirmation email is received, teams are to notify the organizers promptly at <a href="http://www.competition@sgbcc.com.sg">competition@sgbcc.com.sg</a>.
                         </li>
                         <li>
-                            By registering, competitors consent to having their information published on <a href="www.sgbcc.com.sg">www.sgbcc.com.sg</a>.
+                            By registering, competitors consent to having their information published on <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a>.
                         </li>
                     </ul>                    
                 </section>
@@ -132,7 +136,7 @@ class RulesPage extends Page{
                     </p>
                     <ul>
                         <li>
-                            The preliminary round case will be released on 15 February 2013 0900 hrs. Teams can find the case uploaded on <a href="www.sgbcc.com.sg">www.sgbcc.com.sg</a> after logging in to the Competitor’s page.
+                            The preliminary round case will be released on 15 February 2013 0900 hrs. Teams can find the case uploaded on <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a> after logging in to the Competitor’s page.
                         </li>
                     </ul>
                     
@@ -278,7 +282,7 @@ class RulesPage extends Page{
                             Upon successful receipt of the executive summary, SBCC will notify each team via email.
                         </li>
                         <li>
-                            In the event of submission delay due to a documented failure in network infrastructure or the lack of a receipt acknowledgement email, teams must promptly notify SBCC 2013 organisers at <a href="competition@sgbcc.com.sg">competition@sgbcc.com.sg</a> so that organisers can provide an alternative avenue for submission.
+                            In the event of submission delay due to a documented failure in network infrastructure or the lack of a receipt acknowledgement email, teams must promptly notify SBCC 2013 organisers at <a href="http://www.competition@sgbcc.com.sg">competition@sgbcc.com.sg</a> so that organisers can provide an alternative avenue for submission.
                         </li>
                     </ul>
                     <p>
@@ -530,7 +534,7 @@ class RulesPage extends Page{
                     </div>
                     <ul>
                         <li>
-                            Any other rules or information will be posted on the official competition website <a href="www.sgbcc.com.sg">www.sgbcc.com.sg</a>. Teams are responsible for checking the website regularly for the latest updates.
+                            Any other rules or information will be posted on the official competition website <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a>. Teams are responsible for checking the website regularly for the latest updates.
                         </li>
                         <li>
                             SBCC 2013 organisers reserve the right to disqualify or penalize any teams found to be in breach of the competition rules.
@@ -540,7 +544,11 @@ class RulesPage extends Page{
                         </li>
                     </ul>
                     <p>
-                        <a href='<?php echo $this->getPathPrefix(); ?>functions/rule-download.php' class='btn btn-info'>
+                        <a href='
+                            <?php 
+                            $fileName = urlencode("SBCC 2013 Rules and Regulations.pdf");
+                            echo $this->getPathPrefix()."functions/file-download.php?fileName=$fileName"; ?>
+                           ' class='btn btn-info'>
                             <i class="icon-file icon-white"></i> Download Rules in PDF
                         </a>
                     </p>

@@ -9,6 +9,11 @@ class RegistrationPage extends Page{
                 <?php echo $this->generateLeftCol(); ?>
             </div>
             <div class="span7">
+                <h6>
+                    *For participants who have already registered for the competition, 
+                    <a href="https://docs.google.com/forms/d/17hMlTH7SfnRDRxskudbPcFD6zvje818re5sm6okNDmk/viewform">CLICK HERE</a> 
+                    to sign up for the 15th Feb Case Workshop.  
+                </h6>
                 <h3>Online Registration</h3>
                 <p>
                     Registrations stay open until 21st February 2013, 2359H. However, the case will be released on 15th February and deliverables have to be submitted by 22nd February, 0900H. Register early to give yourselves more time!
@@ -96,7 +101,8 @@ class RegistrationPage extends Page{
                                         <option value="NTU">NTU - Nanyang Technological University</option>                
                                         <option value="NUS">NUS - National University of Singapore</option>                
                                         <option value="SMU">SMU - Singapore Management University</option>                
-                                        <option value="SIM">SIM - Singapore Institute of Management</option>   
+                                        <option value="SIM">SIM - Singapore Institute of Management</option> 
+                                        <option value="SUTD">SUTD – Singapore University of Technology and Design</option> 
                                         <option value="NYP">NYP - Nanyang Polytechnic</option>                
                                         <option value="NP">NP - Ngee Ann Polytechnic</option>                
                                         <option value="RP">RP - Republic Polytechnic</option>                
