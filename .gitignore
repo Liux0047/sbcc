@@ -15,6 +15,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.downloads/
 
 # External tool builders
 .externalToolBuilders/
@@ -125,6 +126,7 @@ Thumbs.db
 
 # Folder config file
 Desktop.ini
+*.m4v
 
 
 #############
