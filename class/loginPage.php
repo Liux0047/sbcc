@@ -27,7 +27,7 @@ class LoginPage extends Page{
                             <?php
                         }
                         ?>
-                        <form id="login" action="<?php echo $this->getPathPrefix(); ?>login.php" method="POST">
+                        <form id="login" action="./login.php" method="POST">
                             <label for="userEmail" >   
                                 <input class="span3" id="userEmail" name="userEmail" type="text" placeholder="Email Address"/>
                             </label>                                
