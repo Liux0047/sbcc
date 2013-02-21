@@ -9,13 +9,20 @@ class CPPageTest extends Page{
             <div class="span7">    
                 <h3>Competition Portal</h3>
                 <br>                
-                <form enctype="multipart/form-data" action="<?php $this->getPathPrefix(); ?>processFile.php" method="POST">
-                <!-- MAX_FILE_SIZE must precede the file input field -->
-                <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
-                <!-- Name of input element determines name in $_FILES array -->
-                Send this file: <input name="userfile" type="file" />
-                <input type="submit" value="Send File" />
-                </form>
+                <div class="alert alert-info">
+                    <h4>SBCC 2013 Preliminary Submissions  Portal</h4>
+                    <br>
+                    <p>
+                        Upload your <strong>.zip</strong> file containing your <strong>1-Page Executive Summary (PDF)</strong> and <strong>6-Slides PPT (PDF)</strong> below (Deadline 22nd Feb 2013, 0900hrs):
+                    </p>
+                    <form enctype="multipart/form-data" action="<?php $this->getPathPrefix(); ?>processFile.php" method="POST">
+                    <!-- MAX_FILE_SIZE must precede the file input field -->
+                    <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
+                    <!-- Name of input element determines name in $_FILES array -->
+                    Send this file: <input name="userfile" type="file" />
+                    <input type="submit" value="Send File" />
+                    </form>
+                </div>
                 <h4>Case Preparation Kit</h4>
                 <ul>
                     <li>

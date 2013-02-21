@@ -20,6 +20,39 @@ class AdminIndexPage extends AdminPage{
         echo "<h4>Total Case Submissions Received</h4>";      
         echo "$numRows files<br><br>";
         
+        // summary of the participants's stats
+        echo "<h4> summary of the participants' stats</h4>";   
+        //summary of univeristy
+        echo "<h5>Instituutions</h5>";
+        $sql = "SELECT institution, COUNT(*) AS num FROM member GROUP BY institution";
+        $result = $db->query($sql);        
+        $numRows = $result->num_rows;
+        for ($i=0; $i<$numRows; $i++){
+            $row = $result->fetch_assoc();
+            echo $row['institution']." - ".$row['num']."<br>";
+        }
+        
+        //summary Under Graduate Course
+        echo "<h5>Under Graduate Course</h5>";
+        $sql = "SELECT course, COUNT(*) AS num FROM member GROUP BY course";
+        $result = $db->query($sql);        
+        $numRows = $result->num_rows;
+        for ($i=0; $i<$numRows; $i++){
+            $row = $result->fetch_assoc();
+            echo $row['course']." - ".$row['num']."<br>";
+        }
+        
+        //summary Under Graduate Course
+        echo "<h5>Year of graduation</h5>";
+        $sql = "SELECT yog, COUNT(*) AS num FROM member GROUP BY yog";
+        $result = $db->query($sql);        
+        $numRows = $result->num_rows;
+        for ($i=0; $i<$numRows; $i++){
+            $row = $result->fetch_assoc();
+            echo $row['yog']." - ".$row['num']."<br>";
+        }        
+        echo "<br>";
+        
         //query DB to get dietary restrictions
         echo "<h4>Dietary Restrictions</h4>";
         $sql = "SELECT * FROM member WHERE dietary_restriction != 'N.A'";

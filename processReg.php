@@ -131,8 +131,10 @@ $message = Swift_Message::newInstance('SBCC - Registration Confirmation')
         ->setFrom(array('info@sgbcc.com.sg' => 'SBCC Organising Committee'))
         ->setTo(array($teamEmail => $teamName))
         ->setBody($emailContent,'text/html')
-        ->attach(Swift_Attachment::fromPath('./downloads/SBCC 2013 Rules and Regulations.pdf'))
+        ->attach(Swift_Attachment::fromPath('./downloads/SBCC Preliminary Case 2013.pdf'))
 ;
+//attache rules
+$message->attach(Swift_Attachment::fromPath('./downloads/SBCC 2013 Rules and Regulations.pdf'));
 $result = $mailer->send($message);
 /* end of sending email  */
 

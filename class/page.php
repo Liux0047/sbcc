@@ -111,59 +111,57 @@ abstract class Page{
         $tempList = array();
         ?>
         <hr>
-        <div class="contanier" well>            
-            <div class="span12">
-                <div class="row">
-                    <div class="span1">
-                    </div>
-                    <div class="span4">
-                        Organized by:<br>
-                        <ul class="list-style-none">
-                            <li><a href="<?php echo $this->pathPrefix; ?>Business-Solutions.php">Business Solutions</a></li>
-                            <li><a href="http://www.nbs.ntu.edu.sg">Nanyang Business School</a></li>
-                            <li><a href="http://www.ntu.edu.sg">Nanyang Technological University</a></li>
-                        </ul>                
-                    </div>
-                    <div class="span6">
-                        <p>
-                            &copy; Copyright <a href="http://www.sgbcc.com.sg/2012/">2012</a>, <a href="http://www.sgbcc.com.sg/2013/">2013</a> Singapore Business Case Competition. All Rights Reserved.<br>
-                            Made with <a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a>
-                        </p>            
-                        <div class="row">
-                            <?php
-                            $menu = $this->navbar->getMenu();                              
-                            foreach ($menu as $key => $item){                        
-                                //if there are submenus
-                                if (count($item['items'])){          
-                                    echo "<ul class='list-style-none span2'>";
-                                    if (count($tempList)){
-                                        foreach ($tempList as $key => $tempItem){
-                                            echo "<li><a href='".$this->pathPrefix.$tempItem['link']."'>".$tempItem['displayMenuName']."</a></li>";
-                                            unset($tempList[$key]);
-                                        }
-                                    }
-                                    foreach ($item['items'] as $key => $listItem ){
-                                        echo "<li><a href='".$this->pathPrefix.$listItem['link']."'>".$listItem['displayItemName']."</a></li>";
-                                    }
-                                    echo "</ul>";
-                                }
-                                else{
-                                    //if no submenus, add this link to a templist and display next time
-                                    array_push($tempList,$item);                                    
-                                }                               
-
-                            }
-                            //display the remaining elements in tempList
-                            if (count($tempList)){
+        <div class="container">      
+            <div class="row">
+                <div class="span1">
+                </div>
+                <div class="span4">
+                    Organized by:<br>
+                    <ul class="list-style-none">
+                        <li><a href="<?php echo $this->pathPrefix; ?>Business-Solutions.php">Business Solutions</a></li>
+                        <li><a href="http://www.nbs.ntu.edu.sg">Nanyang Business School</a></li>
+                        <li><a href="http://www.ntu.edu.sg">Nanyang Technological University</a></li>
+                    </ul>                
+                </div>
+                <div class="span6">
+                    <p>
+                        &copy; Copyright <a href="http://www.sgbcc.com.sg/2012/">2012</a>, <a href="http://www.sgbcc.com.sg/2013/">2013</a> Singapore Business Case Competition. All Rights Reserved.<br>
+                        Made with <a href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a>
+                    </p>            
+                    <div class="row">
+                        <?php
+                        $menu = $this->navbar->getMenu();                              
+                        foreach ($menu as $key => $item){                        
+                            //if there are submenus
+                            if (count($item['items'])){          
                                 echo "<ul class='list-style-none span2'>";
-                                foreach ($tempList as $key => $item){
-                                    echo "<li><a href='".$this->pathPrefix.$item['link']."'>".$item['displayMenuName']."</a></li>";
-                                    unset($tempList[$key]);                                    
+                                if (count($tempList)){
+                                    foreach ($tempList as $key => $tempItem){
+                                        echo "<li><a href='".$this->pathPrefix.$tempItem['link']."'>".$tempItem['displayMenuName']."</a></li>";
+                                        unset($tempList[$key]);
+                                    }
+                                }
+                                foreach ($item['items'] as $key => $listItem ){
+                                    echo "<li><a href='".$this->pathPrefix.$listItem['link']."'>".$listItem['displayItemName']."</a></li>";
                                 }
                                 echo "</ul>";
                             }
-                            ?>                    
-                        </div>
+                            else{
+                                //if no submenus, add this link to a templist and display next time
+                                array_push($tempList,$item);                                    
+                            }                               
+
+                        }
+                        //display the remaining elements in tempList
+                        if (count($tempList)){
+                            echo "<ul class='list-style-none span2'>";
+                            foreach ($tempList as $key => $item){
+                                echo "<li><a href='".$this->pathPrefix.$item['link']."'>".$item['displayMenuName']."</a></li>";
+                                unset($tempList[$key]);                                    
+                            }
+                            echo "</ul>";
+                        }
+                        ?>                    
                     </div>
                 </div>
             </div>
@@ -198,6 +196,7 @@ abstract class Page{
             </a>
             <br><br>
             <h5>Proudly Sponsored by:</h5>
+            <img src='<?php echo $this->getPathPrefix(); ?>img/Keppel-Corporation - small.jpg'><br><br>
             <img src='<?php echo $this->getPathPrefix(); ?>img/leefoundation-logo.jpg'>
             <span class="span2"><hr></span>
             <?php //$this->generateStepImg(); ?>

@@ -21,7 +21,7 @@ class LoginPage extends Page{
                                 <h4 class="alert-heading">Sorry, your logging in has failed</h4>
                                 <p>Invalid email or password</p>
                                 <p>
-                                  <a class="btn btn-danger" href="#">Forget passwrod?</a> 
+                                  <a class="btn btn-danger" href="<?php echo $this->getPathPrefix(); ?>forget-pwd.php">Forget password?</a> 
                                 </p>
                             </div>
                             <?php

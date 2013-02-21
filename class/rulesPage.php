@@ -43,13 +43,13 @@ class RulesPage extends Page{
                             Students are to register in teams of 3-4. Students do not have to belong to the same educational institution. Cross-institutions teams are encouraged.
                         </li>
                         <li>
-                            The competition consists of 3 rounds; a preliminary round which takes place over the internet, followed by the semi-final and final round which will be held at Nanyang Business School, Singapore.
+                            The competition consists of 3 rounds; a preliminary round which takes place over the Internet, followed by the semi-final and final round which will be held at Nanyang Business School, Singapore.
                         </li>
                     </ul>
                     <p>
                         <span class="font-underline">Preliminary Round</span><br>
-                        Case Release:  15 February 2013, 0900hrs <br>
-                        Preliminary Round Deliverables Submission:  22 February 2013, 0900hrs                        
+                        Case Release:  15 February 2013, 1200hrs <br>
+                        Preliminary Round Deliverables Submission:  22 February 2013, 1200hrs                        
                     </p>
                     <p>
                         <span class="font-underline">Semi-finals and Finals</span><br>
@@ -116,17 +116,6 @@ class RulesPage extends Page{
                     </ul>                    
                 </section>
                 <br>
-                <section id="Judging">
-                    <div class="page-header">
-                        <h3>Judging</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            All deliverables will be evaluated on the basis of clarity, accuracy of issue identification and analysis, the relevance and viability of proposals and recommendations, and creativity.
-                        </li>
-                    </ul>                    
-                </section>
-                <br>
                 <section id="PreliminaryRound">
                     <div class="page-header">
                         <h3>Preliminary Round</h3>
@@ -136,7 +125,7 @@ class RulesPage extends Page{
                     </p>
                     <ul>
                         <li>
-                            The preliminary round case will be released on 15 February 2013 0900 hrs. Teams can find the case uploaded on <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a> after logging in to the Competitor’s page.
+                            The preliminary round case will be released on 15 February 2013 1200 hrs. Teams can find the case uploaded on <a href="http://www.sgbcc.com.sg">www.sgbcc.com.sg</a> after logging in to the Competitor’s page.
                         </li>
                     </ul>
                     
@@ -146,7 +135,7 @@ class RulesPage extends Page{
                     <ul>
                         <li>                            
                             <p>
-                                Teams are to submit a two page executive summary and a six slides powerpoint presentation that encompasses their solution to the case problem in one PDF file by 22 February 2013, 0900hrs. 
+                                Teams are to submit a <strong>one</strong> page executive summary and a <strong>six</strong> slides presentation that encompasses their solutions into a zipped folder by 22 February 2013, 1200hrs. 
                             </p>                        
                             <p>
                                 The executive summary submitted should abide to the following specifications:
@@ -428,7 +417,9 @@ class RulesPage extends Page{
                     </p>
                     <ul>
                         <li>                            
-                            The organisers of SBCC 2013 will prepare copies of each team’s PowerPoint slides and distribute them to the judges.<br>
+                            The organisers of SBCC 2013 will prepare copies of each team’s PowerPoint slides and distribute them to the judges.
+                        </li>
+                        <li>
                             Teams are not permitted to give the judges any other supplementary material.
                         </li>
                     </ul>

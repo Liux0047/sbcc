@@ -24,15 +24,13 @@ $db = DBConnect();
 //check if file has been posted to this page
 if( isset($_FILES['userfile'])){
     try{    
-        $uploaddir = './uploads/';
-        $uploadFileName = basename($_FILES['userfile']['name']);
-        //get the next Auto increment ID for this file
-        $result = $db->query("SHOW TABLE STATUS LIKE 'submission'");
-        $row = $result->fetch_assoc();
-        $nextId = $row['Auto_increment'];
-        $result->free();
+        $uploaddir = './uploads/';        
+        $uploadFileName = 'SBCC2013-'.$_SESSION['registrationId'];
+        //get the suffix of file
+        $baseName = basename($_FILES['userfile']['name']);
+        $suffix = substr($baseName, (strrpos($baseName, ".") - strlen($baseName)));
         //append the ID to the next file submitted
-        $uploadFile = $uploaddir.$nextId."-".$uploadFileName;
+        $uploadFile = $uploaddir.$uploadFileName.$suffix;
 
         //if file upload has no error
         if ($_FILES['userfile']['error'] === UPLOAD_ERR_OK) { 
@@ -46,7 +44,7 @@ if( isset($_FILES['userfile'])){
                         "NOW(),".
                         $_SESSION['registrationId'].",".
                         "1,".
-                        "'".$uploadFileName."')";
+                        "'".$uploadFileName.$suffix."')";
                 $result = $db->query($sql);
                 if ($result){
                     generateEmail($db);
