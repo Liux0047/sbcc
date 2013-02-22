@@ -27,17 +27,23 @@ class CPPage extends Page{
                         Upload your <strong>.zip</strong> file containing your <strong>1-Page Executive Summary (PDF)</strong> and <strong>6-Slides PPT (PDF)</strong> below (Deadline 22nd Feb 2013, 1200hrs):
                     </p>
                     <p>
+                        The submission period for the Preliminary Round has ended. Thank you for taking part in SBCC 2013. 
+                    </p>
+                    <p>
+                        Teams will be notified through the team email on the status of their submissions by 26 Feb 2013, 2359hrs.
+                    </p>
+                    <!-- submission portal closed
+                    <p>
                         <strong>Multiple submissions allowed</strong>
                     </p>
                     <form enctype="multipart/form-data" action="<?php $this->getPathPrefix(); ?>processFile.php" method="POST">
-                    <!-- MAX_FILE_SIZE must precede the file input field -->
-                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                    <!-- Name of input element determines name in $_FILES array -->
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />                    
                     Submit your file here: <input name="userfile" type="file" />
                     <input class="btn btn-primary" type="submit" value="Send File" />
                     <br>
                     <small>*File size should not exceed 10M</small>
-                    </form>                                                
+                    </form>                                       
+                    -->
                 </section>    
                 <br>
                 <section>

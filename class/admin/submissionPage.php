@@ -4,8 +4,10 @@ class SubmissionPage extends AdminPage{
     public function generateContent() {
         $db = $this->getDB();
         
-        $sql = "SELECT * FROM submission INNER JOIN registration on submission.registration_id=registration.registration_id ".
-            "WHERE is_latest=1";
+        $sql = "SELECT registration.registration_id AS registration_id, team_name, file_name, time_uploaded FROM registration LEFT JOIN ".
+                "(SELECT * FROM submission WHERE is_latest=1) AS latest_submission ".
+                "on latest_submission.registration_id=registration.registration_id ".
+                "ORDER BY registration.registration_id";
         $result = $db->query($sql);
         $numRows = $result->num_rows;
         echo "<h3>All Files submitted</h3>";
@@ -18,11 +20,16 @@ class SubmissionPage extends AdminPage{
             echo "<td>".$row['registration_id']."</td>";
             echo "<td>".$row['team_name']."</td>";
             //encode the filename which will be sent to the donwload function
-            $fileName = urlencode($row['file_name']);
-            echo "<td><a href='".$this->getPathPrefix()."functions/case-download.php?fileName=$fileName"."' class='btn btn-info'>";
-            echo "<i class='icon-file icon-white'></i> ".$row['file_name']."</a></td>";
-            $timeSubmitted = convertTimeZone($row['time_uploaded']);
-            echo "<td>".$timeSubmitted."</td>";
+            if ( $row['file_name'] != null){
+                $fileName = urlencode($row['file_name']);
+                echo "<td><a href='".$this->getPathPrefix()."functions/case-download.php?fileName=$fileName"."' class='btn btn-info'>";
+                echo "<i class='icon-file icon-white'></i> ".$row['file_name']."</a></td>";
+                $timeSubmitted = convertTimeZone($row['time_uploaded']);
+                echo "<td>".$timeSubmitted."</td>";
+            }
+            else{
+                echo "<td>No submission</td><td></td>";
+            }
             echo "</tr>";
         }
         echo "</tbody></table>";

@@ -37,7 +37,15 @@ class SponsorsPage extends Page{
                 <p>
                     The Lee Foundation was set up in Singapore in 1952 and in Malaya in 1960 by the late businessman and philanthropist Lee Kong Chian (1893-1967). The Foundation has granted hundreds of millions of dollars to various causes, regardless of race, language, religion, nationality, geographical location, and with no conditions attached. The Lee Foundation supports the development of case writing and teaching in Singapore through support of the Asian Business Case Centre at Nanyang Business School.
                 </p>
-                <br>
+                <br><br>
+                
+                <h4>Other Sponsors</h4>
+                <img src="<?php echo $this->getPathPrefix(); ?>img/SOE new logo.png">
+                <p>
+                    Now in its eleventh year, the Spirit of Enterprise – an IPC approved charity, promotes and advances entrepreneurial spirit in Singapore by a variety of efforts honouring local self-reliant entrepreneurs operating small and medium-sized businesses and serves to inspire Singaporeans, especially the young, to become entrepreneurs by facilitating interaction, communication and knowledge dissemination between students, the entrepreneurs and the general public. Students, entrepreneurs who are interested in the activities or the awards process of SOE can write to <a href="mailto:secretariat@soe.org.sg">secretariat@soe.org.sg</a>.
+                </p>
+                <br><br>
+                
                 <h4>Sponsorship Opportunity</h4>                
                 <p>
                     Your generosity will give you the opportunity to identify potential business leaders and show your corporate support for cultivating the next generation of sustainable businesses. Some of our sponsors' packages also allow you to interact with the most talented undergraduates in Singapore and build a network for the future. In sponsoring SBCC, you are choosing to partner a reputable business school and a prestigious competition. 

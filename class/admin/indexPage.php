@@ -13,7 +13,7 @@ class AdminIndexPage extends AdminPage{
         echo "$numRows Teams<br><br>";
         
         //query db to get the number of cases submitted
-        $sql = "SELECT COUNT(*) AS num_rows FROM submission";
+        $sql = "SELECT COUNT(*) AS num_rows FROM submission where is_latest=1";
         $result = $db->query($sql);
         $row = $result->fetch_assoc();
         $numRows = $row['num_rows'];

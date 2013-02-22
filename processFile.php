@@ -65,7 +65,7 @@ if( isset($_FILES['userfile'])){
     }    
 }
 else{
-    $page->setErrorMessage("Error in uploading file");    
+    $page->setErrorMessage("No file being uploaded");    
 }
 
 $page->generatePage();
