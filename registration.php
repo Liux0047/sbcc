@@ -1,4 +1,7 @@
 <?php
+//registration closed on 22th Feb
+header("Location: https://docs.google.com/spreadsheet/viewform?formkey=dE82bXBlSWl3QWRvdjJsM291Q0w5ZVE6MQ");
+
 include './functions/core-functions.php';
 
 startSession();

@@ -191,15 +191,14 @@ abstract class Page{
         ?>
         <div class="span3">
             <br>            
-            <a class="btn btn-large btn-primary padding-side30" href="<?php echo $this->getPathPrefix(); ?>registration.php">
-                Register Here Now
+            <a class="btn btn-large btn-primary" href="<?php echo $this->getPathPrefix(); ?>registration.php">
+                Audience Registration
             </a>
             <br><br>
             <h5>Proudly Sponsored by:</h5>
             <img src='<?php echo $this->getPathPrefix(); ?>img/Keppel-Corporation - small.jpg'><br><br>
-            <img src='<?php echo $this->getPathPrefix(); ?>img/leefoundation-logo.jpg'>
-            <span class="span2"><hr></span>
-            <?php //$this->generateStepImg(); ?>
+            <img src='<?php echo $this->getPathPrefix(); ?>img/leefoundation-logo.jpg'>            
+            <hr class="hr-leftCol">
             <h5>Organized by:</h5>
             <img src='<?php echo $this->getPathPrefix(); ?>img/Business-Solutions.jpg'>
             <br>

@@ -9,17 +9,14 @@ class IndexPage extends Page{
                     <h3 class="font-black">What's Happening</h3>
                     <div class="font-grey">
                         <p>
-                            The preliminary round case has been released!
+                            The submission period for the Preliminary Round has ended. 
                         </p>
                         <p>
-                            *Registration for SBCC closes 21 Feb 2013, 2359hrs.
+                            Teams will be notified through the team email on the status of their submissions by 26 Feb 2013, 2359hrs.
                         </p>
                         <p>
-                            <strong>*Prelim Case Solutions Submission Deadline</strong> is 22 Feb 2013, 1200hrs
-                        </p>
-                        <p>
-                            ‘Like’ the SBCC <a href="http://www.facebook.com/SingaporeBusinessCaseCompetition"><strong>Facebook Page</strong></a> to receive important updates on the competition! 
-                        </p>                        
+                            <a href=" https://docs.google.com/spreadsheet/viewform?formkey=dE82bXBlSWl3QWRvdjJsM291Q0w5ZVE6MQ"><strong>Sign up here</strong></a> to be part of the <strong>Grand Finals</strong> audience on 2nd March!
+                        </p>                   
                     </div>
                 </div>
                 <div class="span8">

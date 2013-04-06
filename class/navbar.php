@@ -17,7 +17,7 @@ class Navbar {
             'items'=> array(
                 'results' => array('displayItemName' => 'Results','link'=>'results.php'),
                 'judges'=> array('displayItemName' => 'Judges','link'=>'judges.php'),
-                'registration'=> array('displayItemName' => 'Online Registration','link'=>'registration.php'),
+                'registration'=> array('displayItemName' => 'Grand Finals<br> Audience Registration','link'=>'registration.php'),
                 'rules'=> array('displayItemName' => 'Rules','link'=>'rules.php'),                
                 'resources'=> array('displayItemName' => 'Resources','link'=>'resources.php')
                 ),

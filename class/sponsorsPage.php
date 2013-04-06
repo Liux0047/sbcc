@@ -35,14 +35,29 @@ class SponsorsPage extends Page{
                 <h4>Official Platinum Sponsor</h4>
                 <img src="<?php echo $this->getPathPrefix(); ?>img/leefoundation-logo.jpg">
                 <p>
-                    The Lee Foundation was set up in Singapore in 1952 and in Malaya in 1960 by the late businessman and philanthropist Lee Kong Chian (1893-1967). The Foundation has granted hundreds of millions of dollars to various causes, regardless of race, language, religion, nationality, geographical location, and with no conditions attached. The Lee Foundation supports the development of case writing and teaching in Singapore through support of the Asian Business Case Centre at Nanyang Business School.
+                    The <strong>Lee Foundation</strong> was set up in Singapore in 1952 and in Malaya in 1960 by the late businessman and philanthropist Lee Kong Chian (1893-1967). The Foundation has granted hundreds of millions of dollars to various causes, regardless of race, language, religion, nationality, geographical location, and with no conditions attached. The Lee Foundation supports the development of case writing and teaching in Singapore through support of the Asian Business Case Centre at Nanyang Business School.
                 </p>
                 <br><br>
                 
                 <h4>Other Sponsors</h4>
                 <img src="<?php echo $this->getPathPrefix(); ?>img/SOE new logo.png">
                 <p>
-                    Now in its eleventh year, the Spirit of Enterprise – an IPC approved charity, promotes and advances entrepreneurial spirit in Singapore by a variety of efforts honouring local self-reliant entrepreneurs operating small and medium-sized businesses and serves to inspire Singaporeans, especially the young, to become entrepreneurs by facilitating interaction, communication and knowledge dissemination between students, the entrepreneurs and the general public. Students, entrepreneurs who are interested in the activities or the awards process of SOE can write to <a href="mailto:secretariat@soe.org.sg">secretariat@soe.org.sg</a>.
+                    Now in its eleventh year, the <strong>Spirit of Enterprise</strong> – an IPC approved charity, promotes and advances entrepreneurial spirit in Singapore by a variety of efforts honouring local self-reliant entrepreneurs operating small and medium-sized businesses and serves to inspire Singaporeans, especially the young, to become entrepreneurs by facilitating interaction, communication and knowledge dissemination between students, the entrepreneurs and the general public. Students, entrepreneurs who are interested in the activities or the awards process of SOE can write to <a href="mailto:secretariat@soe.org.sg">secretariat@soe.org.sg</a>.
+                </p>
+                <br><br>
+                
+                <img src="<?php echo $this->getPathPrefix(); ?>img/Olive Green Logo.jpg">
+                <p>
+                    <strong>Olive Green</strong> is a company that develops, manufactures and distributes bioplastics and other eco-friendly material. Our primary products include Origo, which is made into disposable tableware, carrier bags and other packaging - CornWare, CornBag, CornPack, CornStuff.
+                </p>
+                <p>
+                    Not only have we refined our technological processes over the years so as to bring forth a product that has the capabilities to address the growing concerns of climate change, we have also created a product that is cost and performance competitive to oil-based plastics and fibers.
+                </p>
+                <p>
+                    Our philosophy is that everyone, as responsible stewards of Earth, should live in harmony with the environment in a sustainable manner. Our aim is to raise environmental conservation awareness through education and by making our products easily accessible so that eco-friendly habits can become part of our daily lives
+                </p>
+                <p>
+                    Olive Green believes that we can meet the demands of today without having to compromise our earth’s resources if we stay dedicated to the true ideology of sustainability.
                 </p>
                 <br><br>
                 
