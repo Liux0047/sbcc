@@ -4,13 +4,13 @@
 include './config.php';
 include './includes/db-connect.php';
 
-//$db = DBConnect();
+$db = DBConnect();
 
 //get all post data and 
 //Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection
-$teamName = ($_POST['teamName']);
-$teamEmail =  ($_POST['teamEmail']);
-$contact =  ($_POST['contact']);
+$teamName = $db->real_escape_string ($_POST['teamName']);
+$teamEmail = $db->real_escape_string ($_POST['teamEmail']);
+$contact = $db->real_escape_string ($_POST['contact']);
 $password = $_POST['password'];      //special char in pwd should not be escaped
 $teamSize = $_POST['teamSize'];
 
@@ -18,17 +18,17 @@ $members = array ();
 for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
     //for each member, get his post data
     $member = array(
-        'name' => ($_POST["member".$memberId."Name"]),
-        'email' => ($_POST["member".$memberId."Email"]),
+        'name' => $db->real_escape_string ($_POST["member".$memberId."Name"]),
+        'email' => $db->real_escape_string ($_POST["member".$memberId."Email"]),
         'inst' => $_POST["member".$memberId."Inst"],
-        'course' => ($_POST["member".$memberId."Course"]),
+        'course' => $db->real_escape_string ($_POST["member".$memberId."Course"]),
         'YOG' => $_POST["member".$memberId."YOG"],
-        'DR' =>  ($_POST["member".$memberId."DR"])
+        'DR' => $db->real_escape_string ($_POST["member".$memberId."DR"])
     );
     $members[$memberId] = $member;
 }
 //var_dump($members);
-/*
+
 //check if the email has already been regitered
 $sqlCheckEmail = "select * from registration where team_email = '$teamEmail'";
 $resultCheckEmail = $db->query($sqlCheckEmail);
@@ -37,14 +37,12 @@ if ($resultCheckEmail->num_rows){
     die('The email has already been registered');
 }
 $resultCheckEmail->free();
-/*
+
 //get the current auto_increment Id
 $result = $db->query("SHOW TABLE STATUS LIKE 'registration'");
 $row = $result->fetch_assoc();
 $nextId = $row['Auto_increment'];
 $result->free();
- * 
- */
 
 //write team info into database
 $sqlTeam = "insert into registration (team_name, team_email, password, contact_no, team_size, time_registered, isqf, issf, isgf) values(".
@@ -55,16 +53,14 @@ $sqlTeam = "insert into registration (team_name, team_email, password, contact_n
         "$teamSize,".
         "NOW(),".
         "0,0,0)";
-/*
+
 $resultTeam = $db->query($sqlTeam);
 if (!$resultTeam){
     die('Error in writing team info to database.');
 }
 echo "<br>";
- * 
- */
 //echo $sqlTeam;
-/*
+
 //write member info into database
 for ($memberId = 1; $memberId <= $teamSize; $memberId ++){
     $isLeader = 0;
@@ -94,7 +90,7 @@ include './plug-in/swift-mailer/lib/swift_required.php';
 include './functions/core-functions.php';
 
 //generate a regRef
-$regRef = generateRegRef(1,$teamSize);
+$regRef = generateRegRef($nextId,$teamSize);
 
 //read the template from file
 $filePath = "./templates/confirmation.html";
@@ -142,7 +138,7 @@ $message->attach(Swift_Attachment::fromPath('./downloads/SBCC 2013 Rules and Reg
 $result = $mailer->send($message);
 /* end of sending email  */
 
-//$db->close();
+$db->close();
 
 /* generate the page */
 include './class/navbar.php';
